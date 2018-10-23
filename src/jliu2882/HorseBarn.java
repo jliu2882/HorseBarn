@@ -1,7 +1,11 @@
 package jliu2882;
 
-public class HorseBarn implements Horse{
+public class HorseBarn{
     private Horse[] spaces;
+
+    public HorseBarn(Horse[] horses){
+        this.spaces = horses;
+    }
 
     public int findHorseSpace(String name){
         for(int i =0; i <this.spaces.length;i++){
@@ -23,5 +27,15 @@ public class HorseBarn implements Horse{
             }
         }
         this.spaces = spacesCopy;
+    }
+
+    public String toString(){
+        String result = "";
+        for(int i = 0; i<this.spaces.length;i++){
+            if(spaces[i]!=null){
+                result += this.spaces[i].getName() + " weighs " +  this.spaces[i].getWeight() + " horse units, and is in space " + i + System.lineSeparator();
+            }
+        }
+        return result;
     }
 }
