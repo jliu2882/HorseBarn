@@ -31,11 +31,12 @@ public class HorseBarn{
 
     public String toString(){
         String result = "";
-        for(int i = 0; i<this.spaces.length;i++){
-            if(spaces[i]!=null){
-                result += this.spaces[i].getName() + " weighs " +  this.spaces[i].getWeight() + " horse units, and is in space " + i + System.lineSeparator();
+        for(int i = 0; i<this.spaces.length;i++) {
+            if (spaces[i] != null) {
+                result += System.lineSeparator() + this.spaces[i].getName() + " weighs " + this.spaces[i].getWeight() + " horse units, and is in space " + i;
             }
         }
+        result += System.lineSeparator();
         return result;
     }
 }
