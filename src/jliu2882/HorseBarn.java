@@ -33,7 +33,10 @@ public class HorseBarn{
         String result = "";
         for(int i = 0; i<this.spaces.length;i++) {
             if (spaces[i] != null) {
-                result += System.lineSeparator() + this.spaces[i].getName() + " weighs " + this.spaces[i].getWeight() + " horse units, and is in space " + i;
+                result += System.lineSeparator() + this.spaces[i].getName() + " is a " + this.spaces[i].getBreed().toLowerCase() +" and weighs " + this.spaces[i].getWeight() + " horse units, and is in space " + i + ".";
+            }
+            if (spaces[i] == null){
+                result += System.lineSeparator()  + "Space " + i + " is currently empty.";
             }
         }
         result += System.lineSeparator();
